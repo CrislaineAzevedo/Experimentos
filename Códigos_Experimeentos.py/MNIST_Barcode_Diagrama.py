@@ -10,7 +10,7 @@ from scipy.linalg import inv
 img = train_X[np.where(train_y == 8)[0][0]]
 
 limiar = 100
-coords = np.column_stack(np.where(img > limiar))
+coords = np.column_stack(np.where(img < limiar))
 pontos = np.column_stack([coords[:, 1], -coords[:, 0]])
 pontos = StandardScaler().fit_transform(pontos)
 

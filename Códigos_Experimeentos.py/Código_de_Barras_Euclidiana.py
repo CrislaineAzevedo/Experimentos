@@ -19,8 +19,6 @@ for nome_arquivo in os.listdir(entrada):
     coords = np.column_stack(np.where(img < limiar))
     pontos = np.column_stack([coords[:, 0], coords[:, 1]])
 
-    np.random.seed(42) 
-
     if len(pontos) > 8000:
         idx = np.random.choice(len(pontos), 8000, replace=False)
         pontos = pontos[idx]

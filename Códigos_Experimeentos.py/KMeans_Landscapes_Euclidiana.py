@@ -22,7 +22,7 @@ for nome_arquivo in arquivos:
     caminho = os.path.join(pasta_landscapes, nome_arquivo)
     vetor = np.load(caminho)
 
-    if vetor.shape[0] != 5000:
+    if vetor.shape[0] != 8000:
         continue
 
     dados.append(vetor)

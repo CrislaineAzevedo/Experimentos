@@ -14,7 +14,7 @@ for nome_arquivo in tqdm(os.listdir(pasta_imagens)):
     img = cv2.imread(caminho_imagem, cv2.IMREAD_GRAYSCALE)
     coords = np.column_stack(np.where(img < limiar))
 
-    max_pontos = 8000
+    max_pontos = 4500
     if coords.shape[0] > max_pontos:
         idx = np.random.choice(coords.shape[0], size=max_pontos, replace=False)
         coords = coords[idx]

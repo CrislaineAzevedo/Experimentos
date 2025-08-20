@@ -7,7 +7,7 @@ entrada = r"C:\Users\crisl\Resultados_ic\Matriz_Diagrama"
 saida = r"C:\Users\crisl\Resultados_ic\Landscapes"
 
 num_landscape = 10 
-pontos = 500    
+pontos = 450   
 
 todos_os_arquivos = os.listdir(entrada)
 

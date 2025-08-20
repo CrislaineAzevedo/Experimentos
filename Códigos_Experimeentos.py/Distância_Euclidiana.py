@@ -6,8 +6,7 @@ import os
 
 
 entrada = r"C:\Users\crisl\Rostos"
-matriz_dist = r"C:\Users\crisl\Resultados_ic\Matriz de Distância"
-
+matriz_dist = r"C:\Users\crisl\Resultados_ic\Distância Euclidiana"
 imagens = sorted(os.listdir(entrada))
 
 limiar = 100
@@ -19,8 +18,7 @@ for nome_arquivo in tqdm(imagens, desc ="Calculando matrizes de distância"):
 
     coords = np.column_stack(np.where(img < limiar))
     pontos = np.column_stack([coords[:, 0], coords[:, 1]])
-
-    np.random.seed(42) 
+ 
     if len(pontos) > max_pontos:
         indice = np.random.choice(len(pontos), max_pontos, replace=False)
         pontos = pontos[indice]

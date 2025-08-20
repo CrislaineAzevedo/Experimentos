@@ -6,8 +6,6 @@ import gudhi
 import os
 
 
-#Função que peguei de um material
-
 def GetBettiCurvesFromDistances(D, J, dim=2):
     I = 2*J
     tmax = max(I)
@@ -29,8 +27,8 @@ def GetBettiCurvesFromDistances(D, J, dim=2):
 
 
 matriz_distancia = r"C:\Users\crisl\Resultados_ic\Distância Euclidiana"
-saida_img = r"C:\Users\crisl\Resultados_ic\Curvas de Betti\plots"
-saida_csv = r"C:\Users\crisl\Resultados_ic\Curvas de Betti\csvs"
+saida_img = r"C:\Users\crisl\Resul_ic\Curvas de Betti\plots"
+saida_csv = r"C:\Users\crisl\Resul_ic\Curvas de Betti\csvs"
 
 raios = np.linspace(0.05, 3, 100) 
 matrizes = sorted([f for f in os.listdir(matriz_distancia) if f.endswith(".npy")])
@@ -59,7 +57,7 @@ for nome_arq in tqdm(matrizes, desc="Calculando curvas de Betti"):
     plt.legend()
     plt.tight_layout()
 
-    caminho_plot = os.path.join(saida_img, f"{nome_base}_curva.png")
+    caminho_plot = os.path.join(saida_img, f"{nome_base}.png")
     plt.savefig(caminho_plot)
     plt.close()
 
